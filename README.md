@@ -5,7 +5,7 @@
 
 ## 🛠 Стек
 * **Framework:** FastAPI
-* **ORM:** SQLAlchemy (PostgreSQL драйвер: `asyncpg`)
+* **ORM:** SQLAlchemy (MySQL)
 * **Caching/NoSQL:** Redis
 * **DevOps:** Docker / Docker Compose
 
@@ -28,6 +28,6 @@
    *Интерфейс Swagger будет доступен по адресу:* `http://localhost:8000/docs`
 
 ## 💡 Логика работы
-* **Регистрация/Вход:** Данные проверяются через **SQLAlchemy** в PostgreSQL. При успешном входе генерируется токен.
+* **Регистрация/Вход:** Данные проверяются через **SQLAlchemy** в MySQL. При успешном входе генерируется токен.
 * **Сессия:** Токен записывается в **Redis** (`token: user_id`) с ограничением по времени (TTL).
-* **Авторизация:** Middleware/Dependency проверяет токен напрямую в **Redis** без обращения к PostgreSQL.
+* **Авторизация:** Middleware/Dependency проверяет токен напрямую в **Redis** без обращения к MySQL.
