@@ -18,17 +18,8 @@
    ```
 
 2. **Настройка окружения (`.env`):**
-   Создайте файл `.env` в корне проекта:
-   ```env
-   POSTGRES_USER=postgres
-   POSTGRES_PASSWORD=secret
-   POSTGRES_DB=auth_db
-   DATABASE_URL=postgresql+asyncpg://postgres:secret@db:5432/auth_db
+   Создайте файл `.env` в корне проекта, и скопируйте из .env.example данные(добавив свой пароль)
 
-   REDIS_HOST=redis
-   REDIS_PORT=6379
-   TOKEN_TTL=3600
-   ```
 
 3. **Запуск через Docker Compose:**
    ```bash
